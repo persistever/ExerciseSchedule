@@ -1,0 +1,4 @@
+conda activate ExerciseSchedule
+D:
+cd D:\Python\ExerciseSchedule
+python Schedule.py
