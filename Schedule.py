@@ -6,6 +6,7 @@
 """
 import GetInfo
 import random
+import operator
 from CMember import CMember
 from CScheduleTimeTable import CScheduleTimeTable
 
@@ -27,8 +28,15 @@ if __name__ == "__main__":
     coachTimeTable = CScheduleTimeTable()
     coachTimeTable.merge_all_member_time(memberList)
     # coachTimeTable.print_table()
+
+    for daytime in coachTimeList:
+        daytime.get_select_number(coachTimeTable.numTable)
+    coachTimeList.sort(key=operator.attrgetter('selectNumber'), reverse=False)
+    # for item in coachTimeList:
+    #     print('day: '+str(item.day)+' time: '+str(item.time)+' selectNumber: '+str(item.selectNumber))
     coachTimeTable.schedule(coachTimeList, memberList)
 
+    coachTimeList.sort(key=lambda x: (x.day, x.time))
     for coach_time in coachTimeList:
         coach_time.print_coach_time_schedule(memberList)
 
@@ -40,6 +48,7 @@ if __name__ == "__main__":
             member.print_member_unschedule_name()
 
     for member in memberList:
+        member.sort_schedule_time_list()
         print('\n')
         member.print_member_time()
 

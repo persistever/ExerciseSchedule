@@ -24,6 +24,7 @@ class CMember:
         self.availableTimeList = init_available_time_list
         self.scheduleTimeList = []
         self.isSchedule = 0
+        self.conflict = 0.0
         CMember.memberCount += 1
         CMember.memberNotSchedule = CMember.memberCount
 
@@ -49,6 +50,9 @@ class CMember:
         self.get_member_priority()
         return delete_daytime
 
+    def sort_schedule_time_list(self):
+        self.scheduleTimeList.sort(key=lambda x: (x.day, x.time))
+
     def print_member_time(self):
         print('姓名: ' + self.name + '\n已安排的时间为: ')
         for daytime in self.scheduleTimeList:
@@ -61,8 +65,26 @@ class CMember:
             print(self.name)
 
     def get_member_priority(self):
-        #self.priority = self.priority
-        self.priority = self.initPriority*1.0 + (self.restTimeNumber*1.0)/(0.5*(self.expectTimeNumber*1.0)*math.log(len(self.availableTimeList)+2.0))
+        # self.priority = self.priority
+        self.priority = self.initPriority*1.0 + (self.restTimeNumber*1.0)/((self.expectTimeNumber*1.0) * math.log(len(self.availableTimeList)+2.0))
+        # self.priority = self.initPriority * 1.0
+
+    def get_member_conflict(self, num_table):
+        temp_count = 0
+        for i in range(len(self.availableTimeList)):
+            if i == 0:
+                continue
+            else:
+                temp_count += num_table[self.availableTimeList[i].day-1][self.availableTimeList[i].time-1]
+        if len(self.availableTimeList) >= 2:
+            self.conflict = temp_count*1.0/(len(self.availableTimeList)-1.0)*self.restTimeNumber
+        else:
+            self.conflict = 0
+
+
+
+
+
 
 
 

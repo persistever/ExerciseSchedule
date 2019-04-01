@@ -13,6 +13,7 @@ class CCoachTime:
         self.time = time
         # self.availableMember = []
         self.resultMember = []
+        self.selectNumber = 0
         self.is_available = 1
 
     def print_coach_time_schedule(self, member_list):
@@ -24,6 +25,9 @@ class CCoachTime:
             print(DAY[self.day-1]
                   + ' ' + str(self.time) + ':00'
                   + ' ' + str(member_list[self.resultMember[0]].name))
+
+    def get_select_number(self, num_table):
+        self.selectNumber = num_table[self.day-1][self.time-1]
 
 
 
