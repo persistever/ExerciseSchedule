@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7de841b-4103-43fc-ad5f-d8b368726b3a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ExerciseSchedule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ExerciseSchedule.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCoachTime.py" beforeDir="false" afterPath="$PROJECT_DIR$/CCoachTime.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMember.py" beforeDir="false" afterPath="$PROJECT_DIR$/CMember.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CScheduleTimeTable.py" beforeDir="false" afterPath="$PROJECT_DIR$/CScheduleTimeTable.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/CoachTime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/CoachTime.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Schedule.py" beforeDir="false" afterPath="$PROJECT_DIR$/Schedule.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/MemberTime.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/MemberTime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/ResultsForCoach.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ResultsForCoach.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/ResultsForMember.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ResultsForMember.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Schedule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+            <state relative-caret-position="780">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="e#68#82#0" expanded="true" />
               </folding>
@@ -52,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CScheduleTimeTable.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+            <state relative-caret-position="270">
+              <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -61,8 +60,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMember.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+            <state relative-caret-position="120">
+              <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+              <folding>
+                <element signature="e#71#94#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,8 +135,8 @@
         <option value="$PROJECT_DIR$/CCoachTimeList.py" />
         <option value="$PROJECT_DIR$/GetInfo.py" />
         <option value="$PROJECT_DIR$/CCoachTime.py" />
-        <option value="$PROJECT_DIR$/CScheduleTimeTable.py" />
         <option value="$PROJECT_DIR$/Schedule.py" />
+        <option value="$PROJECT_DIR$/CScheduleTimeTable.py" />
         <option value="$PROJECT_DIR$/CMember.py" />
       </list>
     </option>
@@ -252,7 +254,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4295011" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2646421" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -290,8 +292,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Schedule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="49" />
+        <state relative-caret-position="780">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="e#68#82#0" expanded="true" />
           </folding>
@@ -300,8 +302,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CScheduleTimeTable.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+        <state relative-caret-position="270">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -338,8 +340,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMember.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
+        <state relative-caret-position="120">
+          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+          <folding>
+            <element signature="e#71#94#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

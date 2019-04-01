@@ -66,7 +66,9 @@ class CMember:
 
     def get_member_priority(self):
         # self.priority = self.priority
-        self.priority = self.initPriority*1.0 + (self.restTimeNumber*1.0)/((self.expectTimeNumber*1.0) * math.log(len(self.availableTimeList)+2.0))
+        # self.priority = self.initPriority*1.0 + (self.restTimeNumber*1.0)/((self.expectTimeNumber*1.0) * math.log(len(self.availableTimeList)+2.0))
+        self.priority = self.initPriority * 1.0 + (4.0 - self.restTimeNumber) / (
+                    (self.expectTimeNumber * 1.0) * math.log(len(self.availableTimeList) + 2.0))
         # self.priority = self.initPriority * 1.0
 
     def get_member_conflict(self, num_table):
