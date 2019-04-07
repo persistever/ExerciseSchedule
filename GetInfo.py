@@ -31,7 +31,7 @@ def get_available_time_of_coach(file_name):
     return temp_list
 
 
-def get_available_time_of_member(file_name, coach_time_list):
+def get_available_time_of_member(file_name, coach_time_list, lucky_member_list):
     temp_list = []
     f = open(file_name, 'r')
     line = f.readline()
@@ -76,9 +76,28 @@ def get_available_time_of_member(file_name, coach_time_list):
             # print(int(temp_priority))
             # print(temp_available_time_list)
             temp_member = CMember(temp_name, int(temp_expect_number), int(temp_priority)*1.0, temp_available_time_list)
+            temp_member.get_member_init_priority(lucky_member_list)
             temp_member.get_member_priority()
+            # print(temp_name)
+            # print(temp_member.priority)
             temp_list.append(temp_member)
         # print(line)
         line = f.readline()
+    f.close()
+    return temp_list
+
+
+def get_lucky_member_list(file_name):
+    temp_list = []
+    f = open(file_name, 'r')
+    line = f.readline()
+    while line:
+        if line[0] == '#':
+            break
+        elif line == "上周程序没有完全安排的名单：\n":
+            line = f.readline()
+        else:
+            temp_list.append(line.strip())
+            line = f.readline()
     f.close()
     return temp_list
