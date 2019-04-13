@@ -95,9 +95,9 @@ def get_lucky_member_list(file_name):
         if line[0] == '#':
             break
         elif line == "上周程序没有完全安排的名单：\n":
-            continue
+            line = f.readline()
         else:
             temp_list.append(line.strip())
-		line = f.readline()
+            line = f.readline()
     f.close()
     return temp_list
