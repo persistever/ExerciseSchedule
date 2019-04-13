@@ -42,7 +42,7 @@ class CMember:
                 delete_index.append(daytime)
         else:
             for daytime in self.availableTimeList:
-                if daytime.day == day or daytime.day == day + 1:
+                if daytime.day == day - 1 or daytime.day == day or daytime.day == day + 1:
                     delete_daytime.append((daytime.day-1, daytime.time-1))
                     delete_index.append(daytime)
         for index in delete_index:
