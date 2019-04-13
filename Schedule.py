@@ -16,8 +16,11 @@ if __name__ == "__main__":
     coachTimeList = GetInfo.get_available_time_of_coach("Data/CoachTime.txt")
     # for item in coachTimeList:
     #     print('day: '+str(item.day)+' time: '+str(item.time))
-    memberList = GetInfo.get_available_time_of_member("Data/MemberTime.txt", coachTimeList)
+    luckyMemberList = GetInfo.get_lucky_member_list("Data/LuckyThisWeek.txt")
+    memberList = GetInfo.get_available_time_of_member("Data/MemberTime.txt", coachTimeList, luckyMemberList)
     random.shuffle(memberList)
+
+    print("luckyMemberList = "+str(luckyMemberList))
     # for item in memberTimeList:
     #     print(item.name)
     #     print(item.expectNumber)

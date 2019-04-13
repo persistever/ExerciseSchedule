@@ -64,6 +64,10 @@ class CMember:
         if self.isSchedule == 0:
             print(self.name)
 
+    def get_member_init_priority(self, lucky_member_list):
+        if self.name in lucky_member_list:
+            self.initPriority += 1
+
     def get_member_priority(self):
         # self.priority = self.priority
         # self.priority = self.initPriority*1.0 + (self.restTimeNumber*1.0)/((self.expectTimeNumber*1.0) * math.log(len(self.availableTimeList)+2.0))
