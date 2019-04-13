@@ -67,6 +67,10 @@ class CScheduleTimeTable:
             for index in delete_index:
                 self.table[index[0]][index[1]].remove(privilege_member[lucky_index])
                 self.numTable[index[0]][index[1]] -= 1
+                # if member_list[privilege_member[lucky_index]].name == '刘丹娜':
+                #     print('***')
+                #     for daytime in member_list[privilege_member[lucky_index]].availableTimeList:
+                #         print('day: '+str(daytime.day)+' time: '+str(daytime.time))
             # self.print_table()
 
     def print_table(self):
