@@ -20,6 +20,9 @@ if __name__ == "__main__":
     memberList = GetInfo.get_available_time_of_member("Data/MemberTime.txt", coachTimeList, luckyMemberList)
     random.shuffle(memberList)
 
+    for member in memberList:
+        member.judge_choose_continuously()
+
     print("luckyMemberList = "+str(luckyMemberList))
     # for item in memberTimeList:
     #     print(item.name)

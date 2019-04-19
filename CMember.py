@@ -25,6 +25,7 @@ class CMember:
         self.scheduleTimeList = []
         self.isSchedule = 0
         self.conflict = 0.0
+        self.canChooseContinuously = 0
         CMember.memberCount += 1
         CMember.memberNotSchedule = CMember.memberCount
 
@@ -41,10 +42,16 @@ class CMember:
                 delete_daytime.append((daytime.day-1, daytime.time-1))
                 delete_index.append(daytime)
         else:
-            for daytime in self.availableTimeList:
-                if daytime.day == day - 1 or daytime.day == day or daytime.day == day + 1:
-                    delete_daytime.append((daytime.day-1, daytime.time-1))
-                    delete_index.append(daytime)
+            if self.canChooseContinuously == 0:
+                for daytime in self.availableTimeList:
+                    if daytime.day == day - 1 or daytime.day == day or daytime.day == day + 1:
+                        delete_daytime.append((daytime.day-1, daytime.time-1))
+                        delete_index.append(daytime)
+            else:
+                for daytime in self.availableTimeList:
+                    if daytime.day == day:
+                        delete_daytime.append((daytime.day-1, daytime.time-1))
+                        delete_index.append(daytime)
         for index in delete_index:
             self.availableTimeList.remove(index)
         self.get_member_priority()
@@ -86,6 +93,15 @@ class CMember:
             self.conflict = temp_count*1.0/(len(self.availableTimeList)-1.0)*self.restTimeNumber
         else:
             self.conflict = 0
+
+    def judge_choose_continuously(self):
+        temp_day = []
+        for daytime in self.availableTimeList:
+            if daytime.day not in temp_day:
+                temp_day.append(daytime.day)
+        if len(temp_day) <= self.expectTimeNumber:
+            self.canChooseContinuously = 1
+
 
 
 
