@@ -73,13 +73,15 @@ class CMember:
 
     def get_member_init_priority(self, lucky_member_list):
         if self.name in lucky_member_list:
-            self.initPriority += 1
+            self.initPriority += 10
 
     def get_member_priority(self):
         # self.priority = self.priority
         # self.priority = self.initPriority*1.0 + (self.restTimeNumber*1.0)/((self.expectTimeNumber*1.0) * math.log(len(self.availableTimeList)+2.0))
         self.priority = self.initPriority * 1.0 + (4.0 - self.restTimeNumber) / (
                     (self.expectTimeNumber * 1.0) * math.log(len(self.availableTimeList) + 2.0))
+        # self.priority = self.initPriority * 1.0 + (self.restTimeNumber * 1.0) / (
+    #         #         (self.expectTimeNumber * 1.0))
         # self.priority = self.initPriority * 1.0
 
     def get_member_conflict(self, num_table):
