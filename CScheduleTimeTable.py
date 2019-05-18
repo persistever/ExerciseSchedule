@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
 """
-@Class Name: CMemberTime
-@Class Function: to describe the time of the member
+@Class Name:
+@Class Function:
+下面所有使用members.memberList的地方目前均跨级调用，不是很规范，不过方便
 """
 import random
 DAY = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
