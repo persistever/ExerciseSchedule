@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     members = CMembers("刘迎")
     members.get_lucky_member_list("Data/LuckyThisWeek.txt")
-    # members.print_lucky_member_list()
+    members.print_lucky_member_list()
     members.get_available_time_of_member("Data/MemberTime.txt", coach.timeList)
     members.preparations()
     # members.print_members_info()
@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     scheduleTimeTable.schedule(coach, members)
     members.refresh_member_not_schedule()
-    # coach.print_schedule_result_of_coach(members.memberList)
+    coach.print_schedule_result_of_coach(members.memberList)
     if members.memberNotSchedule == 0:
         print('\n所有人均已成功安排')
     else:
