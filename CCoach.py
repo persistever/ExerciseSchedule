@@ -37,6 +37,11 @@ class CCoachTime:
     def print_time_of_coach(self):
         print(DAY[self.day - 1] + ' ' + str(self.time) + ':00 ' + "选课人数：" + str(self.selectNumber))
 
+    def write_coach_time_schedule_to_file(self, member_list, file):
+        if self.is_available == 0:
+            file.write(str(self.day)+' '+str(self.time)+' '+member_list[self.resultMember[0]].name+'\n')
+
+
 
 """
 @Class Name: CMemberTimeList
@@ -86,3 +91,11 @@ class CCoach:
         self.timeList.sort(key=lambda x: (x.day, x.time))
         for each_time in self.timeList:
             each_time.print_coach_time_schedule(member_list)
+
+    def write_schedule_result_of_coach_to_file(self, member_list):
+        f = open('Data/ResultForPHP.txt', 'w')
+        self.timeList.sort(key=lambda x: (x.day, x.time))
+        for each_time in self.timeList:
+            each_time.write_coach_time_schedule_to_file(member_list, f)
+        f.write('#')
+        f.close()

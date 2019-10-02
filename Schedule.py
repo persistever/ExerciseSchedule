@@ -33,6 +33,7 @@ if __name__ == "__main__":
     scheduleTimeTable.schedule(coach, members)
     members.refresh_member_not_schedule()
     coach.print_schedule_result_of_coach(members.memberList)
+    coach.write_schedule_result_of_coach_to_file(members.memberList)
     if members.memberNotSchedule == 0:
         print('\n所有人均已成功安排')
     else:
