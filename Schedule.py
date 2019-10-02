@@ -45,6 +45,10 @@ if __name__ == "__main__":
         print('\n')
         member.print_member_time()
 
+    # Create a successfile to show all the process has completed
+    f = open('success', 'a')
+    f.close()
+
 
 
 
