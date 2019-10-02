@@ -47,7 +47,8 @@ if __name__ == "__main__":
         member.print_member_time()
 
     # Create a successfile to show all the process has completed
-    f = open('Data/success', 'a')
+    f = open('Data/success', 'w')
+    f.write('1')
     f.close()
 
 
