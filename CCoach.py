@@ -61,6 +61,8 @@ class CCoach:
             line = line.replace('）', ')')
             # print(line)
             temp_day = line[0]
+            if temp_day == '#':
+                break
             temp_string = line[line.find('(') + 1:line.find(')')]
             temp_time_list = temp_string.split(' ')
             for time in temp_time_list:
