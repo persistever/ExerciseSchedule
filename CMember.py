@@ -80,8 +80,10 @@ class CEachMember:
 
     def get_member_priority(self):
         # self.priority = self.priority * 1.0
+        # self.priority = self.initPriority * 1.0 + (4.0 - self.restTimeNumber) / (
+        #              (self.expectTimeNumber * 1.0) * (len(self.availableTimeList) + 2.0))
         self.priority = self.initPriority * 1.0 + (4.0 - self.restTimeNumber) / (
-                     (self.expectTimeNumber * 1.0) * (len(self.availableTimeList) + 2.0))
+                      (self.expectTimeNumber * 1.0) * math.log(len(self.availableTimeList) + 2.0))
 
     def get_member_conflict(self, count_table):
         temp_count = 0

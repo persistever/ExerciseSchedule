@@ -47,9 +47,11 @@ class CScheduleTimeTable:
             privilege_member = []
 
             for member_number in available_member:
-                if (members.memberList[member_number].priority + members.memberList[member_number].conflict) \
-                        == (members.memberList[available_member[0]].priority
-                            + members.memberList[available_member[0]].conflict):
+                if (members.memberList[member_number].priority + members.memberList[member_number].conflict
+                        <= (members.memberList[available_member[0]].priority
+                            + members.memberList[available_member[0]].conflict)+1.0 or members.memberList[member_number].priority + members.memberList[member_number].conflict
+                        >= (members.memberList[available_member[0]].priority
+                            + members.memberList[available_member[0]].conflict)-1.0):
                     privilege_member.append(member_number)
                 else:
                     break
