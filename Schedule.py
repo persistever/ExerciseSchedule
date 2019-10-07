@@ -34,12 +34,14 @@ if __name__ == "__main__":
     members.refresh_member_not_schedule()
     coach.print_schedule_result_of_coach(members.memberList)
     coach.write_schedule_result_of_coach_to_file(members.memberList)
-    if members.memberNotSchedule == 0:
-        print('\n所有人均已成功安排')
-    else:
-        print('\n共有 ' + str(members.memberNotSchedule) + ' 人没有完全安排，名单如下：')
-        for member in members.memberList:
-            member.print_member_unschedule_name()
+    members.print_not_schedule()
+    members.write_not_schedule_to_file()
+    # if members.memberNotSchedule == 0:
+    #     print('\n所有人均已成功安排')
+    # else:
+    #     print('\n共有 ' + str(members.memberNotSchedule) + ' 人没有完全安排，名单如下：')
+    #     for member in members.memberList:
+    #         member.print_member_unschedule_name()
 
     for member in members.memberList:
         member.sort_schedule_time_list()

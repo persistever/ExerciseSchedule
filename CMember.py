@@ -105,6 +105,10 @@ class CEachMember:
         if len(temp_day) <= self.expectTimeNumber:
             self.canChooseContinuously = 1
 
+    def write_member_unschedule_name_to_file(self, file):
+        if self.isSchedule == 0:
+            file.write(str(self.name)+'\n')
+
 
 class CMembers:
     def __init__(self, coach_name):
@@ -204,4 +208,20 @@ class CMembers:
             if each_member.isSchedule == 0:
                 temp_num += 1
         self.memberNotSchedule = temp_num
+
+    def print_not_schedule(self):
+        if self.memberNotSchedule == 0:
+            print('\n所有人均已成功安排')
+        else:
+            print('\n共有 ' + str(self.memberNotSchedule) + ' 人没有完全安排，名单如下：')
+            for member in self.memberList:
+                member.print_member_unschedule_name()
+
+    def write_not_schedule_to_file(self):
+        f = open('Data/LuckyMemberForPHP.txt', 'w')
+        if self.memberNotSchedule != 0:
+            for member in self.memberList:
+                member.write_member_unschedule_name_to_file(f)
+        f.write('#')
+        f.close()
 
